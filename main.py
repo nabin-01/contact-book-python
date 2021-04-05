@@ -4,6 +4,7 @@ import tkinter.ttk as ttk
 import tkinter.messagebox as tkm
 
 class Main:
+    # Defining constructor for Main class
     def __init__(self, master):
         # Defining title and resize behavior of our Tkinter mainWindow
         master.title("Contact Book")
@@ -52,7 +53,7 @@ class Main:
         self.buttonAdd.grid(row=8, column=1)
         self.buttonDelete.grid(row=8, column=2)
     
-    # Method that is called by the "buttonAdd" 
+    # Called by the "buttonAdd" - after checks sends information to database instance 
     def add(self):
         # Check that no entry fields are empty
         if self.entryName.get() == "" or self.entryEmail.get() == "" or self.entryPhone.get() == "" or self.entryAddress.get() == "":
@@ -64,7 +65,7 @@ class Main:
             # TODO: Send information from entry fields to database function
             pass
 
-    # Method that is called by the "buttonDelete"
+    # Called by the "buttonDelete" - after checks sends information database instance 
     def delete():
         # Check that entryName isn't empty & only contains numbers
         if self.entryName.get() == "" or self.entryName.get().isdigit() == False:
