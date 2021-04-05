@@ -1,8 +1,3 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
@@ -87,17 +82,4 @@ Atte Tarkiainen - atte.tarkiainen@student.laurea.fi
 
 Project Link: [https://github.com/atteilari/contact-book-python](https://github.com/atteilari/contact-book-python)
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/atteilari/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/atteilari/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/atteilari/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/atteilari/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/atteilari/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/atteilari/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/atteilari/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/atteilari/repo/issues
-[license-shield]: https://img.shields.io/github/license/atteilari/repo.svg?style=for-the-badge
-[license-url]: https://github.com/atteilari/repo/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/atte-tarkiainen/
