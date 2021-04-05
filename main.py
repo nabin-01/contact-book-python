@@ -2,11 +2,14 @@ import tkinter as tk
 import tkinter.font as tkf
 import tkinter.ttk as ttk
 import tkinter.messagebox as tkm
+from Database import Database
+from Login import Login
+from SMTP import SMTP
 
 class Main:
     # Defining constructor for Main class
     def __init__(self, master):
-        # Defining title and resize behavior of our Tkinter mainWindow
+        # Defining title and other attributes of our Tkinter mainWindow
         master.title("Contact Book")
         master.resizable(True, True)
 
@@ -62,8 +65,8 @@ class Main:
         elif "@" in self.entryEmail.get() == False or self.entryPhone.get().isdigit() == False:
             tkm.showerror()
         else:
-            # TODO: Send information from entry fields to database function
-            pass
+            # Send information from entry fields to database method
+            db.insert(self.entryName.get(), self.entryEmail.get(), self.entryPhone.get(), self.entryAddress.get())
 
     # Called by the "buttonDelete" - after checks sends information database instance 
     def delete():
@@ -71,11 +74,28 @@ class Main:
         if self.entryName.get() == "" or self.entryName.get().isdigit() == False:
             tkm.showwarning()
         else:
-            # TODO: Send information from entryName to database function
-            pass
+            # Send information from entryName to database method
+            db.remove(self.entryName.get())
+
+    # Called every time a change is made in the database to update the tkinter treeview
+    def updateTree():
+        pass
 
 # This blocks the code inside from being ran if this class is imported
 if __name__ == "__main__":
+    db = Database()
+    smtp = SMTP()
     root = tk.Tk()
     Main(root)
+    toplevel = tk.Toplevel(root)
+    Login(toplevel)
     root.mainloop()
+
+### ^ The execution of the program explained ^ ###
+# 1. Create an instance of the Database class into "db" variable
+# 2. Create an instance of the SMTP class into "smtp" variable
+# 3. Create an instance of Tkinter mainWindow into "root" variable
+# 4. Create an instance of Main class - pass root as "master" parameter for constructor
+# 5. Create a Tkinter topLevel into "toplevel" variable, pass root as the "root window" parameter
+# 6. Create an instance of Login class - pass toplevel as "master" parameter for constructor
+# 7. Tkinter loop that keeps the window open until it's closed
